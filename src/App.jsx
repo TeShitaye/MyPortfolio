@@ -1,23 +1,25 @@
-import './App.css'
-import About from './components/About'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import Projects from './components/Projects'
-import Services from './components/Services'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Navbar from './components/Navbar';
+import About from './components/About';
+import Services from './components/Services';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Home from './components/Home';
 
 function App() {
-  
   return (
-    <>
-    <div>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Services/>
-      <Projects/>
-    </div>
-    </>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

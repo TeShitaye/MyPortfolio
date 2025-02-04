@@ -1,23 +1,71 @@
-import React from 'react'
-import Img from '../assets/tekuuu.png'
+import React from 'react';
+import Img from '../assets/tekuuu.png';
+import { motion } from 'framer-motion'; // For animations
+
 const Hero = () => {
   return (
-    <div className='bg-gray-800 text-white py-16 text-center'>
-      <img src={Img} alt='' className='mx-auto mb-8 h-56 rounded-full w-56 transform transition-transform duration-300 hover:scale-105'/>
-      <h1 className='text-4xl font-bold'>
-        I am {" "}
-        <span className='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500'>Tekalign Shitaye</span>
-        , Full stack developer
-      </h1>
-      <p className='mt-4 text-xl text-gray-300'>
-        I specialize in developing modern and responsive web appplcations
-      </p>
-      <div className='mt-8 space-x-6 '>
-        <button className='bg-gradient-to-r from-green-400 to-blue-500 py-2 px-4 rounded-full text-white hidden md:inline transition-transform hover:scale-105 duration-300 transfom'>Contact With Me</button>
-        <button className='bg-gradient-to-r from-pink-400 to-yellow-500 py-2 px-4 rounded-full text-white hidden md:inline transition-transform hover:scale-105 duration-300 transfom'>Ressume</button>
-      </div>
-    </div>
-  )
-}
+    <div className='bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-900 dark:to-gray-800 text-white py-20 text-center'>
+      {/* Image with Animation */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <img
+          src={Img}
+          alt='Tekalign Shitaye'
+          className='mx-auto mb-8 h-56 w-56 rounded-full object-cover transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-transparent hover:border-gradient-to-r hover:border-gradient-from-green-400 hover:border-gradient-to-blue-500'
+        />
+      </motion.div>
 
-export default Hero
+      {/* Text with Gradient Animation */}
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className='text-4xl font-bold'
+      >
+        I am{" "}
+        <span className='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 animate-gradient'>
+          Tekalign Shitaye
+        </span>
+        , Full Stack Developer
+      </motion.h1>
+
+      {/* Subtitle with Fade Animation */}
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className='mt-4 text-xl text-gray-300'
+      >
+        I specialize in developing modern and responsive web applications.
+      </motion.p>
+
+      {/* Buttons with Hover Effects */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.9 }}
+        className='mt-8 space-x-6'
+      >
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className='bg-gradient-to-r from-green-400 to-blue-500 py-2 px-6 rounded-full text-white font-semibold transform transition-transform duration-300 hover:shadow-lg'
+        >
+          Contact With Me
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className='bg-gradient-to-r from-pink-400 to-yellow-500 py-2 px-6 rounded-full text-white font-semibold transform transition-transform duration-300 hover:shadow-lg'
+        >
+          Resume
+        </motion.button>
+      </motion.div>
+    </div>
+  );
+};
+
+export default Hero;
