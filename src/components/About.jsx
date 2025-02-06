@@ -4,14 +4,14 @@ import aboutUsImg from '../assets/tekalign.jpg';
 
 const About = () => {
   return (
-    <div className='bg-gray-800 dark:bg-gray-900 text-white py-20'>
+    <div className=' dark:bg-gray-900 bg-gray-200 text-gray-900  dark:text-white py-20'>
       <div className='mx-auto container px-8 md:px-16 lg:px-24'>
         {/* Section Title with Animation */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className='text-3xl font-bold mb-8 text-center'
+          className='text-3xl font-bold mb-8 text-center relative pb-3 after:block after:w-24 after:h-1 after:bg-blue-500 after:mx-auto after:mt-3'
         >
           About Me
         </motion.h2>
@@ -80,19 +80,19 @@ const About = () => {
             <h3 className='text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500'>
               2+
             </h3>
-            <p>Years experience</p>
+            <p className='text-xl font-semibold'>Years experience</p>
           </div>
           <div>
             <h3 className='text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500'>
               10+
             </h3>
-            <p>Projects finished</p>
+            <p className='text-xl font-semibold'>Projects finished</p>
           </div>
           <div>
             <h3 className='text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500'>
               50+
             </h3>
-            <p>Happy clients</p>
+            <p className='text-xl font-semibold'>Happy clients</p>
           </div>
         </motion.div>
       </div>

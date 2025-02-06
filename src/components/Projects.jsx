@@ -20,14 +20,14 @@ const projects = [
     name: "E-Commerce App",
     technologies: "React, Node.js, MongoDB",
     image: img2,
-    github: "https://github.com/TeShitaye/course-JS-and-the-DOM.git",
+    github: "https://github.com/TeShitaye/eCommerce.git",
   },
   {
     id: 3,
     name: "Portfolio Website",
     technologies: "React, Tailwind CSS",
     image: img3,
-    github: "https://github.com/TeShitaye/course-JS-and-the-DOM.git",
+    github: "https://github.com/TeShitaye/MyPortfolio.git",
   },
   {
     id: 4,
@@ -38,10 +38,10 @@ const projects = [
   },
   {
     id: 5,
-    name: "Weather App",
+    name: "Health insurance website",
     technologies: "React, OpenWeather API",
     image: img5,
-    github: "https://github.com/TeShitaye/course-JS-and-the-DOM.git",
+    github: "https://github.com/TeShitaye/Tenachin-Insurance.git",
   },
   {
     id: 6,
@@ -54,14 +54,14 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className='bg-gray-800 dark:bg-gray-900 text-white py-20'>
+    <div className='dark:bg-gray-900 bg-gray-200 text-gray-900  dark:text-white py-20'>
       <div className='mx-auto container px-8 md:px-16 lg:px-24'>
         {/* Section Title with Animation */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className='text-3xl font-bold mb-8 text-center'
+          className='text-3xl font-bold mb-8 text-center relative pb-3 after:block after:w-24 after:h-1 after:bg-blue-500 after:mx-auto after:mt-3'
         >
           My Projects
         </motion.h2>
@@ -74,7 +74,7 @@ const Projects = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className='bg-gray-700 dark:bg-gray-800 p-6 rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer'
+              className='bg-gray-100 dark:bg-gray-800 p-6 rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer'
             >
               {/* Project Image */}
               <div className='relative overflow-hidden rounded-lg'>
@@ -92,7 +92,7 @@ const Projects = () => {
               <h3 className='mt-4 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500'>
                 {project.name}
               </h3>
-              <p className='mt-2 text-gray-300'>{project.technologies}</p>
+              <p className='mt-2 text-gray-900 dark:text-white'>{project.technologies}</p>
 
               {/* GitHub Link */}
               <a

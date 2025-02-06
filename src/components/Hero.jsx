@@ -1,10 +1,10 @@
 import React from 'react';
-import Img from '../assets/tekuuu.png';
+import Img from '../assets/tekuuusds.png';
 import { motion } from 'framer-motion'; // For animations
 
 const Hero = () => {
   return (
-    <div className='bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-900 dark:to-gray-800 text-white py-20 text-center'>
+    <div className='dark:bg-gray-900 bg-gray-200 text-gray-900  dark:text-white py-20 text-center'>
       {/* Image with Animation */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -14,7 +14,7 @@ const Hero = () => {
         <img
           src={Img}
           alt='Tekalign Shitaye'
-          className='mx-auto mb-8 h-56 w-56 rounded-full object-cover transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-transparent hover:border-gradient-to-r hover:border-gradient-from-green-400 hover:border-gradient-to-blue-500'
+          className='mx-auto mb-8 h-64 w-64 rounded-full object-cover transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-transparent hover:border-gradient-to-r hover:border-gradient-from-green-400 hover:border-gradient-to-blue-500'
         />
       </motion.div>
 
@@ -37,7 +37,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className='mt-4 text-xl text-gray-300'
+        className='mt-4 text-xl text-gray-800 dark:text-white'
       >
         I specialize in developing modern and responsive web applications.
       </motion.p>
