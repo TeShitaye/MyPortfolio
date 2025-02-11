@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Img from '../assets/tekuuusds.png';
 import { motion } from 'framer-motion'; // For animations
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaDownload } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
 const Hero = () => {
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDownloadCV = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = './assets/TekalignShitayeResume.pdf'; // Path to your CV in public folder
+    link.download = 'Tekalign-Shitaye-CV.pdf'; // Name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className='min-h-screen flex items-center dark:bg-gray-900 bg-gray-200 text-gray-900 dark:text-white py-20 px-8'>
       <div className='container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between'>
@@ -77,15 +89,25 @@ const Hero = () => {
                 Hire Me
               </motion.button>
             </Link>
-            <motion.a
-              href="/path-to-resume.pdf"
-              download
+            <motion.button
+              onClick={handleDownloadCV}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className='border-2 border-gray-600 dark:border-gray-400 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300'
+              disabled={isDownloading}
+              className='flex items-center space-x-2 border-2 border-gray-600 dark:border-gray-400 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 disabled:opacity-50'
             >
-              Download CV
-            </motion.a>
+              {isDownloading ? (
+                <div className="flex items-center space-x-2">
+                  <div className="animate-spin rounded-full h-4 w-4 border-2 border-gray-600 border-t-transparent"></div>
+                  <span>Downloading...</span>
+                </div>
+              ) : (
+                <>
+                  <FaDownload className="text-lg" />
+                  <span>Download CV</span>
+                </>
+              )}
+            </motion.button>
           </motion.div>
         </motion.div>
 

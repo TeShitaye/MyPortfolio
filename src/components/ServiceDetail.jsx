@@ -46,7 +46,48 @@ const serviceDetails = {
       'Deployment'
     ]
   },
-  // Add similar detailed objects for other services...
+  'backend-development': {
+    title: 'Backend Development',
+    description: 'Building robust, scalable, and secure server-side applications with modern technologies and best practices.',
+    features: [
+      'RESTful API development',
+      'Database design and optimization',
+      'Authentication and authorization',
+      'Microservices architecture',
+      'Cloud deployment and scaling',
+      'API documentation and testing'
+    ],
+    tools: ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'Docker', 'AWS'],
+    process: [
+      'Requirements analysis',
+      'System architecture design',
+      'Database modeling',
+      'API development',
+      'Security implementation',
+      'Testing and deployment'
+    ]
+  },
+  'mobile-development': {
+    title: 'Mobile App Development',
+    description: 'Creating high-performance, cross-platform mobile applications that provide seamless user experiences.',
+    features: [
+      'Cross-platform development',
+      'Native-like performance',
+      'Offline functionality',
+      'Push notifications',
+      'App store deployment',
+      'Mobile UI/UX design'
+    ],
+    tools: ['React Native', 'Expo', 'Redux', 'Firebase', 'Native APIs', 'Jest'],
+    process: [
+      'Mobile app strategy',
+      'UI/UX design',
+      'App development',
+      'Native integration',
+      'Testing and QA',
+      'App store submission'
+    ]
+  },
   'embedded-systems': {
     title: 'Embedded System Development',
     description: 'Custom embedded system solutions for various applications and industries.',

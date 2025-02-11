@@ -21,13 +21,13 @@ const Footer = () => {
       { name: 'Contact', path: '/contact' }
     ],
     contact: [
-      { icon: FaEnvelope, info: 'tekalign@example.com', href: 'mailto:tekalign@example.com' },
+      { icon: FaEnvelope, info: 'tekushitaye53@gmail.com', href: 'mailto:tekalign@example.com' },
       { icon: FaPhone, info: '+251 912345678', href: 'tel:+251912345678' },
       { icon: FaMapMarkerAlt, info: 'Addis Ababa, Ethiopia', href: 'https://maps.google.com' }
     ],
     social: [
       { icon: FaGithub, href: 'https://github.com/TeShitaye' },
-      { icon: FaLinkedin, href: 'https://linkedin.com/in/yourusername' },
+      { icon: FaLinkedin, href: 'https://www.linkedin.com/in/tekalign-shitaye-3918b0337/' },
       { icon: FaTwitter, href: 'https://twitter.com/yourusername' }
     ]
   };

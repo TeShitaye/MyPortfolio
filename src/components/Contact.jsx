@@ -68,12 +68,12 @@ const Contact = () => {
             <div className="flex items-center space-x-4">
               <FaLinkedin className="w-6 h-6 text-blue-500" />
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/tekalign-shitaye-3918b0337/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-500 transition-colors duration-300"
               >
-                linkedin.com/in/yourprofile
+                My LinkedIn Profile
               </a>
             </div>
             <div className="flex items-center space-x-4">
