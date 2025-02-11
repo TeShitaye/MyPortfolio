@@ -4,7 +4,7 @@ import About from './About'
 import Projects from './Projects'
 import Services from './Services'
 import Contact from './Contact'
-import Footer from './Footer'
+
 
 const Home = () => {
   return (
@@ -14,7 +14,6 @@ const Home = () => {
       <Services/>
       <Projects/>
       <Contact/>
-      <Footer/>
     </div>
   )
 }

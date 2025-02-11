@@ -1,36 +1,43 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // For animations
+import { Link } from 'react-router-dom';
 
 const services = [
   {
     id: 1,
     title: "Web Design",
     description: "Crafting visually stunning and user-friendly websites that captivate your audience and reflect your brand identity.",
+    path: "web-design"
   },
   {
     id: 2,
     title: "Frontend Development",
     description: "Building responsive, interactive, and high-performance user interfaces using modern frameworks like React and Tailwind CSS.",
+    path: "frontend-development"
   },
   {
     id: 3,
     title: "Backend Development",
     description: "Developing robust and scalable server-side applications with Node.js, Express, and databases like MongoDB or PostgreSQL.",
+    path: "backend-development"
   },
   {
     id: 4,
     title: "Mobile App Development",
     description: "Creating cross-platform mobile applications with React Native, ensuring a seamless experience on both iOS and Android.",
+    path: "mobile-development"
   },
   {
     id: 5,
-    title: "UI/UX Design",
-    description: "Designing intuitive and engaging user experiences with tools like Figma, Adobe XD, and user-centered design principles.",
+    title: "Embedded System Development",
+    description: "Designing and implementing embedded systems with Arduino, Raspberry Pi, and other microcontrollers for IoT and automation solutions.",
+    path: "embedded-systems"
   },
   {
     id: 6,
-    title: "DevOps & Deployment",
-    description: "Streamlining development workflows and deploying applications with CI/CD pipelines, Docker, and cloud platforms like AWS or Vercel.",
+    title: "AI-Based Applications",
+    description: "Developing intelligent applications using machine learning, natural language processing, and computer vision technologies.",
+    path: "ai-applications"
   },
 ];
 
@@ -63,12 +70,12 @@ const Services = () => {
                 {service.title}
               </h3>
               <p className='pt-2 dark:text-white text-gray-900'>{service.description}</p>
-              <a
-                href='#'
+              <Link
+                to={`/services/${service.path}`}
                 className='mt-6 inline-block text-green-400 hover:text-blue-500 transition-colors duration-300'
               >
                 Read More
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
